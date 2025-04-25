@@ -1,5 +1,3 @@
-# 🚧 UNDER CONSTRUCTION 🚧
-
 # Vigenère Cipher
 
 Polyalphabetic substitution is an improvement over the simpler Caesar cipher. Each letter is shifted based on the

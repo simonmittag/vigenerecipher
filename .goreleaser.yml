@@ -1,0 +1,49 @@
+version: 2
+builds:
+  - id: caesar
+    binary: caesar
+    main: ./cmd/caesar/main.go
+    goos:
+      - darwin
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    env:
+      - CGO_ENABLED=0
+
+release:
+  github:
+    owner: simonmittag
+    name: caesarcipher
+
+scoops:
+  - name: caesar
+    repository:
+      owner: simonmittag
+      name: scoop-cli
+    commit_author:
+      name: simonmittag
+      email: simonmittag@gmail.com
+    description: A simple Caesar cipher CLI tool.
+    homepage: https://github.com/simonmittag/caesarcipher
+    license: Apache
+
+universal_binaries:
+  - id: caesar
+    replace: true
+    name_template: "caesar"
+
+checksum:
+  name_template: 'checksums.txt'
+
+brews:
+  - name: caesar
+    homepage: https://github.com/simonmittag/caesarcipher
+    repository:
+      owner: simonmittag
+      name: homebrew-cli
+    commit_author:
+      name: simonmittag
+      email: simonmittag@gmail.com
