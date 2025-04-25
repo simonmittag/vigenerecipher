@@ -1,8 +1,8 @@
 version: 2
 builds:
-  - id: caesar
-    binary: caesar
-    main: ./cmd/caesar/main.go
+  - id: vigenere
+    binary: vigenere
+    main: ./cmd/vigenere/main.go
     goos:
       - darwin
       - linux
@@ -16,31 +16,31 @@ builds:
 release:
   github:
     owner: simonmittag
-    name: caesarcipher
+    name: vigenerecipher
 
 scoops:
-  - name: caesar
+  - name: vigenere
     repository:
       owner: simonmittag
       name: scoop-cli
     commit_author:
       name: simonmittag
       email: simonmittag@gmail.com
-    description: A simple Caesar cipher CLI tool.
-    homepage: https://github.com/simonmittag/caesarcipher
+    description: A simple Vigenere cipher CLI tool.
+    homepage: https://github.com/simonmittag/vigenerecipher
     license: Apache
 
 universal_binaries:
   - id: caesar
     replace: true
-    name_template: "caesar"
+    name_template: "vigenere"
 
 checksum:
   name_template: 'checksums.txt'
 
 brews:
-  - name: caesar
-    homepage: https://github.com/simonmittag/caesarcipher
+  - name: vigenere
+    homepage: https://github.com/simonmittag/vigenerecipher
     repository:
       owner: simonmittag
       name: homebrew-cli
