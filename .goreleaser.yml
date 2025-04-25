@@ -31,7 +31,7 @@ scoops:
     license: Apache
 
 universal_binaries:
-  - id: caesar
+  - id: vigenere
     replace: true
     name_template: "vigenere"
 

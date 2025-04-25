@@ -30,7 +30,7 @@ The `vigenere` command-line tool supports encrypting and decrypting text files u
 ### Options
 
 ```bash
-🇫🇷vigenere 0.1.0
+🇫🇷vigenere 0.1.1
 Usage: vigenere [options]
 Options:
   -d    Decrypt the input file and store results in output file
