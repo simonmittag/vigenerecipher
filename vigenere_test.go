@@ -30,6 +30,13 @@ func TestVigenereShift(t *testing.T) {
 			want:     "IFMMP", // Shift by 1
 		},
 		{
+			name:     "Encrypt with 'AAA' password",
+			password: "BBB",
+			input:    "ZZZ",
+			decrypt:  false,
+			want:     "AAA", // Shifts by 0, 1, 2 repeating, only for alphabetic characters
+		},
+		{
 			name:     "Encrypt with 'ABC' password",
 			password: "ABC",
 			input:    "HELLO WORLD",
@@ -42,6 +49,13 @@ func TestVigenereShift(t *testing.T) {
 			input:    "HFNLP YOSND",
 			decrypt:  true,
 			want:     "HELLO WORLD",
+		},
+		{
+			name:     "Encrypt with 'BED' password",
+			password: "BED",
+			input:    "ABCDE",
+			decrypt:  false,
+			want:     "BFFEI",
 		},
 		{
 			name:     "SHE SEES SEASHELLS NEAR THE SEASHORE",

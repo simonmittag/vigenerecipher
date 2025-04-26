@@ -15,6 +15,7 @@ func main() {
 	inputFile := flag.String("i", "", "Path to the input text file (required)")
 	outputFile := flag.String("o", "", "Path to the output text file (required)")
 	password := flag.String("p", "", "Password to use for encryption/decryption (required)")
+	// change this to mode so we have less flags
 	encrypt := flag.Bool("e", false, "Encrypt the input file and store results in output file")
 	decrypt := flag.Bool("d", false, "Decrypt the input file and store results in output file")
 	help := flag.Bool("h", false, "Print usage information")
